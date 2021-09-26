@@ -7,9 +7,7 @@ Site for exploring some of NASA's archives. Our site provides space lovers NASAs
 
 
 The site can be seen using the following URL: 
-
-
-
+https://kay-code-1.github.io/astronomy-world/
 
 Technologies
 ------------
@@ -36,4 +34,4 @@ Version history
 Preview
 ------------
 
-![ScreenShot](./assets/images/site_preview.png)
+![ScreenShot](/assets/images/site_preview.png)
