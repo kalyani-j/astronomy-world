@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Trispace:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+      </head>
+  </head>
+
+  <body>
+    <header>
+      <div class="brand">Astronomy World</div>
+      <title class="title">Astronomy World</title>
+      <br>
+      <a href="#pico-day">NASA image of the day</a>
+      <a href="#img-vid-lib">NASA Image Library</a>
+      <a href="#neo-data">Near Earth Objects</a>
+    </header>
+    <div class="container">
+      <!--NASA image of the day-->
+      <div class="main-content">
+        <div id="pico-day">
+          <div class="section-title"><h2>NASA Image of The Day</h2></div>
+          <div id="gallery">
+            <img id="pod-img" alt="Picture of the day" /><a
+              id="img-link"
+              target="_blank"
+              ><i class="fas fa-external-link-alt"></i
+            ></a>
+          </div>
+          <div class="media">
+            <div class="media-content">
+              <p class="title"></p>
+              <p class="date-taken"></p>
+            </div>
+          </div>
+          <div class="content"></div>
+        </div>
+        <div class="search-container">
+          <p>Find more images...</p>
+
+          <!--Search images on a specific day-->
+          <div class="day-search">
+            <fieldset>
+              <legend>
+                <h3>Search image on specific Day</h3>
+              </legend>
+              <div class="day">
+                  <label for="specific-date">Date:</label>
+                  <input
+                    type="date"
+                    id="specific-date"
+                    name="specific-date"
+                    placeholder="select a date"
+                  />
+                  <i class="fas fa-search btn-search" id="search-image" tabindex="0"></i>
+                </div>
+            </fieldset>
+          </div>
+          <div></div>
+          <!--Search images for a given period-->            
+          <div class="period-search">
+            <fieldset>
+              <legend>
+                <h3>Search images during specific Period</h3>
+              </legend>
+              <div class="date">
+                <label for="from-date">From Date:</label>
+                <input
+                  type="date"
+                  id="from-date"
+                  name="from-date"
+                  placeholder="select a from date"
+                />
+              </div>
+              <br />
+              <div class="date">
+                <label for="">To Date:</label>
+                <input
+                  type="date"
+                  id="to-date"
+                  name="to-date"
+                  placeholder="select a to date"
+                />
+                <i class="fas fa-search button" id="searchImg-byRange" tabindex="0"></i>
+              </div>
+            </fieldset>
+          </div>
+          <div id="searchResult"></div>
+        </div>
+      </div>
+<hr>
+      <!--NASA Image Library-->
+      <div class="img-vid-library" id="img-vid-lib">
+        <div class="section-title">
+          <h2>NASA Image Library</h2>
+          <form id="vid-img-form">
+            <h3>Search Keywords</h3>
+            <input id="vid-img-search" type="text" />
+            <i class="fas fa-search btn-search" type="submit" id="search-imgLibrary"></i>
+            <!-- <button type="submit">Search</button> -->
+          </form>
+        </div>
+
+        <div class="library-img-container">
+          <img id="library-image" src="" />
+        </div>
+        <div class="media media-content description-container">
+          <h4 class="title" id="img-title">Image Title</h4>
+          <p class="date-taken" id="img-date"></p>
+          <p class="img-desc" id="img-description"></p>
+        </div>
+      </div>
+<hr>
+      <!--Near Earth Object (NEO Data)-->
+      <div id="neo-data">
+        <h2 class="neo-head">Daily Near Earth Objects</h2>
+        <div class="neo-date-input">
+          <form id="neo-form">
+            <label for="date">Search for objects on a specific date: </label>
+            <input type="date" id="neo-input" />
+            <!-- <button type="submit" id="neo-search">Search Date</button> -->
+            <i class="fas fa-search button" id="neo-search"></i>
+          </form>
+        </div>
+        <table id="object-table">
+          <tr>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Object Diameter (m)</th>
+            <th>Velocity (km/h)</th>
+            <th>Miss Distance (km)</th>
+            <th>Absolute Magnitude(H)</th>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer">
+        <p>For more information please visit <a href="https://api.nasa.gov/" target="_blank">NASA API Portal</a>
+          <p>
+            <a href="https://www.nasa.gov" target="_blank"><img src="https://fontmeme.com/permalink/210819/8f57b087899ba6c18e36531bda3b9ad1.png" alt="nasa-font"></a>
+          </p>
+        
+      </div>
+      
+    </footer>
+
+    <script src="./assets/JS/script.js"></script>
+  </body>
+</html>
